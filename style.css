@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url("digital-7.ttf");
+}
+
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing : border-box;
+}
+
+body{
+    background : #78c1f3;
+    display : flex;
+    height : 100vh;
+    text-align : center;
+    align-items : center;
+    justify-content : center;
+    font-family : 'digital-clock-font';
+}
+
+.container{
+    background : #fff;
+    padding : 25px;
+    width : 550px;
+    border-radius : 10px;
+}
+
+#DigitalClock,#DigitalDate {
+    color : #78c1f3;
+    margin : 10px;
+     font-size : 60px;
+     letter-spacing: 7px;
+}
+
+#DigitalDate { font-size : 30px;
+     letter-spacing: 3px;
+}
+
+#alarmArea{
+    display : flex;
+    gap : 10px;
+    justify-content : center;
+    margin : 15px;
+}
+
+#alarmArea select{
+    height : 35px;
+    width : 60px;
+    padding : 5px;
+    font-size : 18px;
+    border-radius : 5px;
+    outline : none ;
+    border : 1px solid #a3a3a3;
+}
+
+input{
+    font-size : 16px;
+    border : none;
+    outline : none;
+    width : 50%;
+    border-bottom : 1px solid #000;
+    transition : padding 0.3s 0.2s ease;
+}
+
+input:focus {
+    padding : 5px;
+}
+
+#setAlarm{
+    width : 50%;
+    height : 45px;
+    cursor : pointer;
+    font-size : 16px;
+    background : #78c1f3;
+    border-radius : 5px;
+    outline : none;
+    color : #fff;
+    border : none;
+    margin-bottom : 20px;
+}
+
+#setAlarmTime{
+    font-size : 30px;
+    color : #555;
+    margin : 10px;
+}
+
+#alarmInterval{
+    font-size : 20px;
+    color : #555;
+    margin : 10px;
+}
