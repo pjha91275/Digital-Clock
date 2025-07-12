@@ -1,15 +1,18 @@
-const DigitalClock = document.getElementById("DigitalClock");
-const DigitalDate = document.getElementById("DigitalDate");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const session = document.getElementById("session");
-const alarmName = document.getElementById("alarmName");
-const setAlarmTime = document.getElementById("setAlarmTime");
-const alarmInterval = document.getElementById("alarmInterval");
-const setAlarm = document.getElementById("setAlarm");
-const alarmRow = document.getElementById("alarmRow");
+const DigitalClock = document.getElementById("DigitalClock"),
+ DigitalDate = document.getElementById("DigitalDate"),
+ hours = document.getElementById("hours"),
+ minutes = document.getElementById("minutes"),
+ session = document.getElementById("session"),
+ alarmName = document.getElementById("alarmName"),
+ setAlarmTime = document.getElementById("setAlarmTime"),
+ alarmInterval = document.getElementById("alarmInterval"),
+ setAlarm = document.getElementById("setAlarm"),
+ alarmRow = document.getElementById("alarmRow");
 
-let alarmTime = "" , alarmClearInterval = "", alarmTone = new Audio("./clock-alarm.mp3"), alarmPlayPause = false;
+let alarmTime = "" , 
+alarmClearInterval = "",
+alarmTone = new Audio("./clock-alarm.mp3"), 
+ alarmPlayPause = false;
 
 
 window.addEventListener("load", () => {
@@ -67,7 +70,7 @@ function showTime() {
     setAlarmTime.innerText = "";
   }
 
-  setInterval(showTime, 1000);
+  setTimeout(showTime, 1000);
 }
 
 setAlarm.addEventListener("click", () => {
@@ -106,6 +109,7 @@ else{
     clearTimeout(alarmClearInterval);
 
     alarmTone.pause();
+    alarmName.setAttribute("style", "border-bottom: 2px solid #78c1f3");
 
 }
 });
@@ -133,7 +137,7 @@ function getTimeDifference(){
     }
     alarmInterval.innerHTML = `${zeroPad(hh)}:${zeroPad(mm)}:${zeroPad(ss)}`;
 
-    alarmClearInterval = setTimeout(getTimeDifference, 100);
+    alarmClearInterval = setTimeout(getTimeDifference, 1000);
 }
 
 function zeroPad(param){
