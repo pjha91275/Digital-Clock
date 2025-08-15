@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="stopwatch.css" />
+  <style>
+    body {
+        flex-direction: column;
+    }
+    .stopwatch-container {
+        text-align: center;
+        padding: 20px;
+    }
+    #stopwatch {
+        font-size: 50px;
+        margin: 20px 0;
+        color: #78c1f3;
+    }
+    .stopwatch-buttons button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .start { background-color: #4CAF50; color: white; }
+    .stop { background-color: #EF6262; color: white; }
+    .reset { background-color: #555; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container stopwatch-container">
+    <h1>Stopwatch</h1>
+    <div id="stopwatch">00:00:00</div>
+    <div class="stopwatch-buttons">
+      <button class="start" onclick="startStopwatch()">Start</button>
+      <button class="stop" onclick="stopStopwatch()">Stop</button>
+      <button class="reset" onclick="resetStopwatch()">Reset</button>
+    </div>
+    <br>
+    <button onclick="location.href='index.html'">Back to Clock</button>
+  </div>
+
+  <script src="stopwatch.js"></script>
+</body>
+</html>

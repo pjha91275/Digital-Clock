@@ -91,3 +91,20 @@ input:focus {
     color : #555;
     margin : 10px;
 }
+
+#stopwatchBtn {
+    width: 50%;
+    height: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #4CAF50;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+}
+
+#stopwatchBtn:hover {
+    background: #2e7233;
+}
